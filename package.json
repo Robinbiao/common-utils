@@ -1,0 +1,52 @@
+{
+  "name": "@fedor/utils",
+  "version": "1.0.0",
+  "description": "Provide some VI tool chains for components development.",
+  "main": "dist/util.js",
+  "module": "dist/util.esm.js",
+  "browser": "dist/util.min.js",
+  "author": "allex <allex.wxn@gmail.com> (http://iallex.com/)",
+  "repository": {
+    "type": "git",
+    "url": "http://git.analysys.cn/fss-modules/vue-utils"
+  },
+  "keywords": [
+    "dom",
+    "lang",
+    "utils"
+  ],
+  "scripts": {
+    "build": "npm run lint:fix && rollup-bundle --config ./.fssrc.js",
+    "release": "node .build/release.js",
+    "prepublishOnly": "npm run build",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "npm run lint && mocha"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@fedor/standard": "latest",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.5.2",
+    "dom-cache": "^1.0.0",
+    "replace-in-file": "^2.5.4",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-worker": "^1.0.1"
+  },
+  "peerDependencies": {},
+  "standard": {
+    "ignore": [
+      "lib",
+      "*.tmp"
+    ]
+  },
+  "maintainers": [
+    {
+      "name": "public",
+      "email": "allex.wxn@gmail.com"
+    }
+  ]
+}

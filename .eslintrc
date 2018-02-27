@@ -1,0 +1,11 @@
+"env":
+  "browser": true
+
+"globals":
+  "echarts": true
+
+rules:
+  "no-new": 0
+  "no-sequences": 0
+  "no-unused-vars": 2
+  "no-return-assign": 0

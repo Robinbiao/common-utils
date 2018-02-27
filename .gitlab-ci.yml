@@ -1,0 +1,24 @@
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - yarn --production=false
+
+stages:
+ - build
+ - test
+ - deploy
+
+test:
+  stage: test
+  variables:
+    NODE_ENV: 'production'
+  tags:
+    - development
+  script:
+    - npm run build
+    - npm run test
+  only:
+    - branches
+    - tags
